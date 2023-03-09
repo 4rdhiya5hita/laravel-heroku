@@ -18,5 +18,15 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('/hello', function () use ($router) {
-    return response()->json("Hello World deploy in Heroku - Laravel", 200);
+    return response()->json(
+        [
+            "message" => "Success",
+            "code" => 200,
+            "data" => [
+                "name" => "Ardhiya",
+                "mata kuliah" => "Multi Channel Access",
+                "PaaS" => "Heroku"
+            ]           
+        ]
+    );
 });
